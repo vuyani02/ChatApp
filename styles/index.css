@@ -1,0 +1,77 @@
+:root {
+    --btn-color: #00F2FA;
+    --btn-color-hover: #00f2faa7;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: #000016;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+}
+
+.logo {
+    color: #00F2FA;
+}
+
+.sign-in-btn {
+    background-color: var(--btn-color);
+    color: #fff;
+    padding: 6px 27px;
+    border-radius: 3px;
+}
+
+.sign-in-btn:hover {
+    background-color: var(--btn-color-hover);
+}
+
+main {
+    display: flex;
+    gap: 66px;
+    margin-top: 122px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.description {
+    width: 500px;
+}
+
+.description p:nth-child(2) {
+    margin: 1rem 0;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.description h3:nth-child(4) {
+    margin: 1rem 0;
+}
+
+ul li {
+    margin-bottom: 0.3rem;
+}
+
+.m-btn {
+    margin: 1rem 5rem;
+    display: inline-block;
+}
+
+.chat-img {
+    height: 520px;
+    width: 347px;
+    border-radius: 10px;
+}
