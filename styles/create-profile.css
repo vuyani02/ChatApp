@@ -1,0 +1,91 @@
+main {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.message-1 h1:nth-child(1) {
+    color: var(--btn-color);
+    margin-bottom: 0.6rem;
+}
+
+.message-1 p {
+    font-size: 20px;
+    width: 300px;
+    line-height: 1.5;
+}
+
+span {
+    font-weight: bold;
+}
+
+.sign-up-container {
+    background-color: #00003D;
+    width: 294px;
+    height: 383px;
+    border-radius: 10px;
+}
+
+.sign-up-container h1:nth-child(1) {
+    color: var(--btn-color);
+    margin-top: 42px;
+    margin-bottom: 33px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-input {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 236px;
+    height: 32px;
+    background-color: #000016;
+    border-radius: 5px;
+    padding-left: 0.4rem;
+}
+
+input:focus {
+    outline: 2px solid #2323c9;
+}
+
+.sign-in-btn {
+    background-color: var(--btn-color);
+    color: #fff;
+    padding: 6px 27px;
+    border-radius: 3px;
+    margin-top: 33px;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    background-color: var(--btn-color-hover);
+}
+
+.error {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #ff2727;
+}
+
+.error-2 {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #ff2727;
+}
+
+.already {
+    margin-top: 40px;
+    color: #36BDF2;
+    font-weight: bold;
+    font-size: 14px;
+}
