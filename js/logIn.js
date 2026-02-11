@@ -1,4 +1,4 @@
-import {users} from "./dataBase.js";
+import {users, updateCurrentUser} from "./dataBase.js";
 
 const formEl = document.querySelector("#form");
 const nameEl = document.querySelector("#username");
@@ -36,6 +36,8 @@ formEl.addEventListener("submit", (e) => {
         passwordEl.value = "";
         return
     }
+
+    updateCurrentUser(vName);
 
     // addUser({
     //     name: vName,
