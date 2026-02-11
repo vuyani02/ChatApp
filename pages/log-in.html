@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/create-profile.css">
+    <link rel="stylesheet" href="../styles/normal.css">
+    <title>Sign In</title>
 </head>
 <body>
-    
+    <article>
+        <main>
+           <section class="message-1">
+                <h1>ChatApp</h1>
+                <p><span>ChatApp</span> helps you connect and share with the people in your life.</p> 
+           </section>
+
+           <section class="sign-up-container">
+                <h1>ChatApp</h1>
+                <form action="" id="form">
+                    <input type="text" class="user-input" placeholder="Username" id="username">
+                    <p class="error"></p>
+                    <input type="text" placeholder="Password" id="password">
+                    <p class="error-2"></p>
+                    <button type="submit" class="sign-in-btn">Sign in</button>
+                    <a class="already" href="./create-profile.html">Create new account</a>
+                </form>
+           </section>
+        </main>
+    </article>
+    <script type="module" src="../js/logIn.js"></script>
 </body>
 </html>
