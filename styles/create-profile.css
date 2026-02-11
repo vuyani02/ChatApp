@@ -12,7 +12,7 @@ main {
     margin-bottom: 0.6rem;
 }
 
-p {
+.message-1 p {
     font-size: 20px;
     width: 300px;
     line-height: 1.5;
@@ -25,7 +25,7 @@ span {
 .sign-up-container {
     background-color: #00003D;
     width: 294px;
-    height: 353px;
+    height: 383px;
     border-radius: 10px;
 }
 
@@ -43,7 +43,7 @@ form {
 }
 
 .user-input {
-    margin-bottom: 21px;
+    margin-bottom: 5px;
 }
 
 input {
@@ -63,10 +63,29 @@ input:focus {
     color: #fff;
     padding: 6px 27px;
     border-radius: 3px;
-    margin-top: 38px;
+    margin-top: 33px;
     cursor: pointer;
 }
 
 .sign-in-btn:hover {
     background-color: var(--btn-color-hover);
+}
+
+.error {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #ff2727;
+}
+
+.error-2 {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #ff2727;
+}
+
+.already {
+    margin-top: 40px;
+    color: #36BDF2;
+    font-weight: bold;
+    font-size: 14px;
 }
