@@ -1,0 +1,56 @@
+header {
+    padding: 25px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+h1 {
+    color: var(--btn-color);
+}
+
+h3 {
+    margin-top: 53px;
+    margin-bottom: 15px;
+    width: 100%;
+    padding-left: 91px;
+}
+
+.profile-cont {
+    width: 455px;
+    height: 520px;
+    border-radius: 10px;
+    background-color: #00003D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 32px;
+}
+
+p {
+    padding: 0 25px 0 91px;
+}
+
+.p-btn {
+    margin-top: 52px;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.p-btn:hover {
+    background-color: rgba(255, 0, 0, 0.503);
+}

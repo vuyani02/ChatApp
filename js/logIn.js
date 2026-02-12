@@ -1,4 +1,4 @@
-import {users, updateCurrentUser} from "./dataBase.js";
+import {users, updateCurrentUser, logIn, updateActiveChat} from "./dataBase.js";
 
 const formEl = document.querySelector("#form");
 const nameEl = document.querySelector("#username");
@@ -37,17 +37,17 @@ formEl.addEventListener("submit", (e) => {
         return
     }
 
+    if(users.length > 1) {
+        for(let i = 0; i < users.length; i++) {
+            if(users[i].name !== vName) {
+                updateActiveChat(users[i].name);
+                break;
+            }
+        }
+    }
+
     updateCurrentUser(vName);
-
-    // addUser({
-    //     name: vName,
-    //     password: vpassword,
-    //     about: "",
-    //     online: true,
-    // });
-
-    // nameEl.value = "";
-    // passwordEl.value = "";
+    logIn(vName);
 
     window.location.href = "../pages/chat.html";
 })
