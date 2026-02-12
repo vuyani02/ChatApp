@@ -89,3 +89,9 @@ input:focus {
     font-weight: bold;
     font-size: 14px;
 }
+
+@media(max-width: 480px){
+    main {
+        flex-direction: column;
+    }
+}
