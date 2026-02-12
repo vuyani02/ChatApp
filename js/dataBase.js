@@ -1,6 +1,6 @@
 export let users = JSON.parse(localStorage.getItem('users')) || [];
 export let currentUser = JSON.parse(sessionStorage.getItem('currentUser')) || '';
-export let messages = JSON.parse(localStorage.getItem('massages')) || [];
+export let messages = JSON.parse(localStorage.getItem('messages')) || [];
 export let activeChat = JSON.parse(sessionStorage.getItem('activeChat')) || '';
 
 // users functions
@@ -34,6 +34,11 @@ export const updateActiveChat = (username) => {
 
 
 // messages functions
+
+export function syncMessages() {
+    
+    messages = JSON.parse(localStorage.getItem("messages")) || [];
+}
 
 export const addMessage = (message, user1, user2, time) => {
     
