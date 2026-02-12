@@ -1,4 +1,4 @@
-import { users, currentUser, activeChat, updateActiveChat, addMessage, messages, syncMessages } from "./dataBase.js";
+import { users, currentUser, activeChat, updateActiveChat, addMessage, messages, syncData } from "./dataBase.js";
 
 const usersListEl = document.querySelector(".users-list");
 const userPEl = document.querySelector(".user-p");
@@ -7,10 +7,8 @@ const inputEl = document.querySelector(".chat-input");
 const chatsContEl = document.querySelector(".chats-cont");
 let userEl;
 
-render();
 
-
-function render() {
+const render = () => {
 
     let usersList = "";
     let onlineClass = "";
@@ -25,6 +23,17 @@ function render() {
             onlineClass = "off";
         }
 
+        let message0 = "";
+        let time0 = "";
+
+        messages.length !== 0 && (messages.forEach(({usersId, messagesList}) => {
+            if(usersId === name + currentUser || usersId === currentUser + name){
+                let l = messagesList.length - 1;
+                message0 = messagesList[l].message;
+                time0 = messagesList[l].time;
+            }
+        }))
+
         if(name !== currentUser){   
         usersList += `<div class="user" data-user-name='${name}'>
                     <div class="img-container">
@@ -35,9 +44,9 @@ function render() {
                     <div class="container-2">
                         <div class="text-conatiner">
                             <h3>${name}</h3>
-                            <p>I have it</p>
+                            <p>${message0}</p>
                         </div>
-                        <time datetime="14:30">14:30</time>
+                        <time datetime=${time0}>${time0}</time>
                     </div>
                 </div>`;
         }
@@ -48,8 +57,7 @@ function render() {
     userEl = document.querySelectorAll(".user");
     let currentBtn = '';
     displayChat(activeChat);
-
-    console.log("ran")
+    
     userEl.forEach((user) => {
         user.addEventListener('click', () => {
             currentBtn = user.dataset.userName;
@@ -70,8 +78,8 @@ function render() {
         const now = new Date();
         const h = now.getHours();
         const m = now.getMinutes();
-        let time =  h + "" === "0" ? h + "0:" : h + ":";
-        time +=  m + "" === "0" ? m + "0" : m;
+        let time =  (h + "").length === 1 ? "0" + h + ":": h + ":";
+        time +=  (m + "").length === 1 ? "0" + m : m;
 
         if(mess){
             addMessage(mess, currentUser, activeChat, time);
@@ -82,7 +90,7 @@ function render() {
     })
 
     window.addEventListener('storage', () => {
-        syncMessages();
+        syncData();
         render();
     })
 }
@@ -90,7 +98,7 @@ function render() {
 
 
 
-function displayChat(userName){
+const displayChat = (userName) => {
     userEl.forEach((user0) => {
             let name0 = user0.dataset.userName;
             name0 === activeChat && (user0.style.background = "#00003D");
@@ -134,3 +142,5 @@ function displayChat(userName){
 
     chatsContEl.innerHTML = chatsH;
 }
+
+render();

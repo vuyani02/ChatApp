@@ -10,6 +10,22 @@ export const addUser = (user) => {
     localStorage.setItem('users', JSON.stringify(users));
 };
 
+export const logOut = (user) => {
+    users.forEach(element => {
+        user === element.name && (element.online = false);
+    });
+    
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
+export const logIn = (user) => {
+    users.forEach(element => {
+        user === element.name && (element.online = true);
+    });
+    
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
 
 
 
@@ -35,9 +51,10 @@ export const updateActiveChat = (username) => {
 
 // messages functions
 
-export function syncMessages() {
+export function syncData() {
     
     messages = JSON.parse(localStorage.getItem("messages")) || [];
+    users = JSON.parse(localStorage.getItem('users')) || [];
 }
 
 export const addMessage = (message, user1, user2, time) => {
