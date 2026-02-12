@@ -1,4 +1,4 @@
-import {users, addUser} from "./dataBase.js";
+import {users, addUser, updateCurrentUser} from "./dataBase.js";
 
 const formEl = document.querySelector("#form");
 const nameEl = document.querySelector("#username");
@@ -38,8 +38,11 @@ formEl.addEventListener("submit", (e) => {
         name: vName,
         password: vpassword,
         about: "",
+        img: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
         online: true,
     });
+
+    updateCurrentUser(vName);
 
     nameEl.value = "";
     passwordEl.value = "";
