@@ -85,6 +85,9 @@ https://vuyani02.github.io/ChatApp/
 👨‍💻 **Developer**
 
 **Project Name**: ChatApp
+
 **Developer**: Vuyani
+
 **Type**: Static Web Application
-**Purpose**: Learning project / Prototype / UI system design
+
+**Purpose**: Learning project
