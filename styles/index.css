@@ -57,3 +57,15 @@ ul li {
     width: 347px;
     border-radius: 10px;
 }
+
+@media(max-width: 480px){
+    main {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .description {
+        width: auto;
+        padding: 1rem;
+    }
+}

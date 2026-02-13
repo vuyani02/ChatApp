@@ -54,3 +54,14 @@ p {
 .p-btn:hover {
     background-color: rgba(255, 0, 0, 0.503);
 }
+
+@media(max-width: 480px){
+
+    main {
+        padding: 0 20px;
+    }
+
+    .profile-cont {
+        width: 100%;
+    }
+}
